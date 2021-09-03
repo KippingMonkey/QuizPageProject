@@ -1,0 +1,50 @@
+/* reset default CSS */
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* header styles */
+
+.headerBckg {
+  display: flex;
+  background-color: dodgerblue;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.mq-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  background-color: aqua;
+}
+
+.sm-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+.sm-links .sm-logos {
+  margin: 0.8rem;
+  height: 1.5rem;
+}
+
+.headerbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: coral;
+}
