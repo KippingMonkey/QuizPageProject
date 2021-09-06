@@ -8,14 +8,28 @@
   outline: 0;
   padding: 0;
   margin: 0;
+  text-align: center;
   /* box-sizing: border-box; */
 }
 /* ========= elements general style ========== */
 
 h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: black;
+  margin: 2rem 0 1rem;
+  line-height: 120%;
+}
+h2 {
   font-size: 2rem;
   font-weight: 700;
   color: black;
+  margin: 2rem 0 1rem;
+  line-height: 120%;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 140%;
 }
 
 /* ========= header general ========== */
@@ -25,7 +39,8 @@ h1 {
   background-color: rgba(20, 115, 211, 0.9);
   position: fixed;
   width: 100%;
-  padding: 0.7rem 2rem 0.7rem 2rem;
+  padding: 1rem 5rem 1rem 3rem;
+  z-index: 5;
 }
 
 /* ========= header MagiQuiz logo ========== */
@@ -44,7 +59,7 @@ h1 {
 }
 .sm-links .sm-logos {
   margin: 0.8rem;
-  height: 1.4rem;
+  height: 1.7rem;
 }
 /* ========= header buttons general ========== */
 .headerbtns {
@@ -156,7 +171,6 @@ h1 {
 }
 /* ========= intro section ========== */
 .intro {
-  text-align: center;
 }
 .background-top {
   display: flex;
@@ -181,4 +195,83 @@ h1 {
   width: 65%;
   border-radius: 20px;
   text-align: center;
+}
+.intro-text p {
+  width: 650px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.byline {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(93, 96, 100);
+  margin-bottom: 1rem;
+}
+/* ========= questions sections ========== */
+
+.numberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionNumber,
+.questionMark {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 3;
+}
+.topCircle {
+  background-color: red;
+  border: 5px solid white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.q-image {
+  border-radius: 10px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 700px;
+}
+.q-markContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottomCircle {
+  background-color: rgb(20, 115, 211);
+  border: 5px solid white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.alternatives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.altbtn {
+  background-color: rgb(20, 115, 211);
+  color: white;
+  width: 500px;
+  height: 80px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 10px;
 }
