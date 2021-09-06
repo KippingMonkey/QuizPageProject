@@ -170,7 +170,12 @@ p {
   z-index: 2;
 }
 /* ========= intro section ========== */
-.intro {
+.original-link {
+  color: rgb(20, 115, 211);
+  text-decoration: none;
+}
+.original-link:hover {
+  color: rgb(211, 20, 20);
 }
 .background-top {
   display: flex;
