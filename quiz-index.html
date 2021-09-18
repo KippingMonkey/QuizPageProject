@@ -3,14 +3,18 @@
   <head>
     <title>Rick&MortyQuiz</title>
     <meta charset="utf-8" />
-    <meta name="description" content="Prove your are a fan of Rick & Morty" />
     <meta name="title" content="Rick&MortyQuiz" />
+    <meta name="description" content="Prove your are a fan of Rick & Morty" />
     <meta name="image" content="https://www.magiquiz.com/wp-content/uploads/2018/08/Rick-and-Morty-Trivia_LEAD-1024x535.jpg.webp"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:title" content="Rick & Morty Quiz" />
     <meta property="og:image" content="https://www.magiquiz.com/wp-content/uploads/2018/08/Rick-and-Morty-Trivia_LEAD-1024x535.jpg.webp"/>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="quiz-styles.css" />
     <link rel="icon" href="rick_favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="quiz-js.js" async defer></script>
   </head>
   <body>
     <header>
@@ -21,30 +25,25 @@
         <a href="https://www.pinterest.se/" target="_blank" rel="noopener noreferrer"><img class="sm-logos"     src="quizImages/pinterest.svg" alt="facebooklogo"/></a>
       </div>
       <div class="mq-logo">
-        <a href="https://www.magiquiz.com/quiz/rick-morty-trivia/" target="_blank" rel="noopener noreferrer"><img src="quizImages/MagiQuiz-logo.svg" alt="facebooklogo"/></a>
+        <a href="https://www.magiquiz.com/quiz/rick-morty-trivia/" target="_blank" rel="noopener noreferrer"><img class="mq-logo-img" src="quizImages/MagiQuiz-logo.svg" alt="MagiQuiz logo"/></a>
       </div>
       <div class="headerbtns">
         <div class="searchContainer">
-            <input class="searchbtn" type="button">
+            <input class="searchbtn" type="button" value="">
             <img class="magGlass" src="quizImages/output-onlinepngtools.png" alt="magnifying glass">
         </div>
         <div class="shareContainer">
-            <p class="button-text share-text">Share</p>
-            <input class="sharebtn" type="button"  value="">
-            <div class="sharecircle sc1"></div>
-            <div class="sharecircle sc2"></div>
+            <input class="sharebtn" type="button"  value="Share">
         </div>
         <div class="siContainer">
-            <p class="button-text si-text">Sign In</p>
-            <input class="signInbtn" type="button" value="">
-            <div class="si-circle sic1"></div>
-            <div class="si-circle sic2"></div>
+            <input class="signInbtn" type="button" value="Sign In">
         </div>
       </div>
-    
+    </div>
     </header>
     <div class="background-top">
-        <img class="jap-sun" src="quizImages/JapSun.png" alt="">
+        <img class="diamonds" src="quizImages/Diamonds.png" alt="">
+        <img src="quizImages/JapSun2.png" alt="" class="jap-sun">
     </div>
     <main>
       <section class="intro">
@@ -72,57 +71,37 @@
             challenging to...</p>
         </article>
       </section>
-      <section class="question1">
+      <section class="question-container">
         <div class="numberContainer">
             <div class="topCircle"></div>
           <p class="questionNumber">1</p>
         </div>
         <img
-        class="q-image"
+        class="question-image"
           src="quizImages/12-Rick-Morty-Wubba-Lubba-Dub-Dub-Trap-Remix-YouTube-810x421.jpg.webp"
           alt="Rick making a weird face"
         />
         <div>
-          <div class="q-markContainer">
+          <div class="questionmarkContainer">
             <div class="bottomCircle"></div>
                 <p class="questionMark">?</p>
           </div>
           
         </div>
-        <h2>Perhaps the most important question to start: <br>what does wubba lubba dub dub mean?</h2>
+        <h2 class="question-text">Perhaps the most important question to start: What does wubba lubba dub dub mean?</h2>
         <div class="alternatives">
-            <input class="altbtn" type="button" value="Please leave">
-            <input class="altbtn" type="button" value="I'm a genious">
-            <input class="altbtn" type="button" value="Let's party">
-            <input class="altbtn" type="button" value="I'm in great pain">
+            <input class="altbtn answer1" type="button" value="Please leave">
+            <input class="altbtn answer2" type="button" value="I'm a genious">
+            <input class="altbtn answer3" type="button" value="Let's party">
+            <input class="altbtn answer4" type="button" value="I'm in great pain">
         </div>
       </section>
-    <section class="question2">
-        <div class="numberContainer">
-            <div class="topCircle"></div>
-            <p class="questionNumber">2</p>
-        </div>
-        <img class="q-image" 
-            src="quizImages/12-The-Best-Moments-of-Morty-and-Jessica-Rick-and-Morty-YouTube-810x421.jpg.webp"
-            alt="Rick making a weird face" />
-        <div class="q-markContainer">
-            <div class="bottomCircle"></div>
-            <p class="questionMark">?</p>
-        </div>
-        <h2>What is the name of Morty's crush?</h2>
-        <div class="alternatives">
-            <input class="altbtn" type="button" value="Annie">
-            <input class="altbtn" type="button" value="Jessica">
-            <input class="altbtn" type="button" value="Summer">
-            <input class="altbtn" type="button" value="Heather">
-        </div>
-    </section>
     </main>
     <br />
     <footer>
       Down here is where the footer business goes. Like, where else dude?
     </footer>
 
-    <script src="" async defer></script>
+    
   </body>
 </html>

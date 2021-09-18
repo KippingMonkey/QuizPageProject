@@ -1,0 +1,289 @@
+/* =============== deafault css reset =============== */
+* {
+  /* ==== spacing ==== */
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  /* ==== text ==== */
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: sans-serif;
+  font-size: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  /* ==== visual aid when editing layout ==== */
+  outline: 1px solid var(--color-links-hover);
+}
+
+/* =============== custom properties =============== */
+
+:root {
+  --color-primary-trans: rgba(20, 115, 211, 0.9);
+  --color-primary: rgb(20, 115, 211);
+  --color-secondary: rgb(49, 141, 233);
+  --color-links-hover: rgb(211, 20, 20);
+  --color-dark: rgb(0, 0, 0);
+  --color-light: rgb(255, 255, 255);
+
+  --ff-all-text: "Great Vibes", cursive;
+}
+/* =============== elements general style =============== */
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 2rem 0 1rem;
+  line-height: 120%;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 2rem 0 1rem;
+  line-height: 1.2;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* =============== header general =============== */
+
+.headerMainContainer {
+  display: flex;
+  background-color: var(--color-primary-trans);
+  position: fixed;
+  width: 100%;
+  padding: 1rem 0;
+}
+/* =============== header Social media logos/links =============== */
+.sm-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sm-links .sm-logos {
+  margin: 0.6rem;
+  height: 1.7rem;
+}
+@media (max-width: 700px) {
+  .sm-links .sm-logos {
+    margin: 0.4rem;
+    height: 1.3rem;
+  }
+}
+
+/* =============== header MagiQuiz logo =============== */
+.mq-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+}
+@media (max-width: 700px) {
+  .mq-logo-img {
+    width: 80%;
+  }
+}
+
+/* =============== header buttons general =============== */
+.headerbtns {
+  display: flex;
+  align-items: center;
+  font-family: var(--ff-all-text), sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@media (max-width: 700px) {
+  .headerbtns {
+    order: 3;
+    font-size: 0.8rem;
+  }
+}
+
+/* =============== header search button =============== */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.searchbtn {
+  background-color: var(--color-secondary);
+  border: none;
+  color: var(--color-light);
+  padding: 1rem;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.4rem;
+  border-radius: 50%;
+}
+.magGlass {
+  height: 1.2rem;
+  position: absolute;
+}
+@media (max-width: 700px) {
+  .searchbtn {
+    height: 2rem;
+    width: 2rem;
+  }
+  .magGlass {
+    height: 0.8rem;
+  }
+}
+/* =============== header share button =============== */
+.sharebtn {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  border: none;
+  border-radius: 9999px;
+  height: 3rem;
+  width: 6rem;
+  margin: 0 0.4rem;
+}
+@media (max-width: 700px) {
+  .sharebtn {
+    height: 2rem;
+    width: 4rem;
+  }
+}
+/* =============== header sign-in button =============== */
+.signInbtn {
+  background-color: var(--color-light);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 9999px;
+  height: 3rem;
+  width: 6rem;
+  margin: 0 0.8rem 0 0.4rem;
+}
+@media (max-width: 700px) {
+  .signInbtn {
+    height: 2rem;
+    width: 4rem;
+  }
+}
+/* =============== Top background image =============== */
+.background-top {
+  display: flex;
+  width: 100%;
+  height: 36vw;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  z-index: -3;
+}
+.diamonds {
+  position: absolute;
+  width: 100%;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+  filter: saturate(30%);
+}
+
+.jap-sun {
+  position: absolute;
+  width: 100%;
+  height: 36vw;
+  mix-blend-mode: multiply;
+  opacity: 0.1;
+}
+
+/* =============== intro section =============== */
+.introImage {
+  position: absolute;
+  top: 19vw;
+  left: 17.5%;
+  width: 65%;
+  border-radius: 20px;
+  text-align: center;
+}
+.original-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.original-link:hover {
+  color: var(--color-links-hover);
+}
+
+.intro-text p {
+  width: 650px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.byline {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(93, 96, 100);
+  margin-bottom: 1rem;
+}
+/* =============== questions sections =============== */
+
+.numberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionNumber,
+.questionMark {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 3;
+}
+.topCircle {
+  background-color: red;
+  border: 5px solid white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.question-image {
+  border-radius: 10px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  width: 700px;
+}
+.questionmarkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottomCircle {
+  background-color: rgb(20, 115, 211);
+  border: 5px solid white;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+}
+.alternatives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.altbtn {
+  background-color: rgb(20, 115, 211);
+  color: white;
+  width: 500px;
+  height: 80px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
