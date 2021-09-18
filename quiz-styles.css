@@ -8,7 +8,7 @@
   /* ==== text ==== */
   vertical-align: baseline;
   font-weight: inherit;
-  font-family: sans-serif;
+  font-family: var(--ff-all-text);
   font-size: 100%;
   text-align: center;
   box-sizing: border-box;
@@ -25,8 +25,9 @@
   --color-links-hover: rgb(211, 20, 20);
   --color-dark: rgb(0, 0, 0);
   --color-light: rgb(255, 255, 255);
+  --color-gray: rgb(93, 96, 100);
 
-  --ff-all-text: "Great Vibes", cursive;
+  --ff-all-text: "Inter", sans-serif;
 }
 /* =============== elements general style =============== */
 
@@ -34,29 +35,53 @@ h1 {
   font-size: 2.3rem;
   font-weight: 700;
   color: var(--color-dark);
-  margin: 2rem 0 1rem;
+  margin: 15% 0 1rem;
   line-height: 120%;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--color-dark);
   margin: 2rem 0 1rem;
   line-height: 1.2;
 }
+@media (max-width: 700px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
 p {
   font-size: 1.2rem;
   line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 700px) {
+  p {
+    font-size: 1rem;
+  }
 }
 
 /* =============== header general =============== */
 
 .headerMainContainer {
   display: flex;
+  justify-content: space-between;
   background-color: var(--color-primary-trans);
   position: fixed;
   width: 100%;
   padding: 1rem 0;
+  z-index: 3;
+}
+@media (max-width: 700px) {
+  .headerMainContainer {
+    padding: 0.5 0;
+    justify-content: space-evenly;
+  }
 }
 /* =============== header Social media logos/links =============== */
 .sm-links {
@@ -66,13 +91,13 @@ p {
 }
 
 .sm-links .sm-logos {
-  margin: 0.6rem;
-  height: 1.7rem;
+  margin: 0.5rem;
+  height: 1.6rem;
 }
 @media (max-width: 700px) {
   .sm-links .sm-logos {
     margin: 0.4rem;
-    height: 1.3rem;
+    height: 1rem;
   }
 }
 
@@ -81,11 +106,15 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 2;
 }
-@media (max-width: 700px) {
+.mq-logo-img {
+  width: 90%;
+  padding-left: 2rem;
+}
+@media (max-width: 500px) {
   .mq-logo-img {
     width: 80%;
+    padding: 0;
   }
 }
 
@@ -95,12 +124,11 @@ p {
   align-items: center;
   font-family: var(--ff-all-text), sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media (max-width: 700px) {
   .headerbtns {
-    order: 3;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -116,22 +144,23 @@ p {
   border: none;
   color: var(--color-light);
   padding: 1rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   margin: 0 0.4rem;
   border-radius: 50%;
 }
 .magGlass {
-  height: 1.2rem;
+  height: 1rem;
   position: absolute;
 }
 @media (max-width: 700px) {
   .searchbtn {
-    height: 2rem;
-    width: 2rem;
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
   .magGlass {
-    height: 0.8rem;
+    height: 0.7rem;
   }
 }
 /* =============== header share button =============== */
@@ -140,14 +169,14 @@ p {
   color: var(--color-light);
   border: none;
   border-radius: 9999px;
-  height: 3rem;
-  width: 6rem;
+  height: 2.5rem;
+  width: 5rem;
   margin: 0 0.4rem;
 }
 @media (max-width: 700px) {
   .sharebtn {
-    height: 2rem;
-    width: 4rem;
+    height: 1.5rem;
+    width: 3rem;
   }
 }
 /* =============== header sign-in button =============== */
@@ -156,21 +185,21 @@ p {
   color: var(--color-secondary);
   border: none;
   border-radius: 9999px;
-  height: 3rem;
-  width: 6rem;
+  height: 2.5rem;
+  width: 5rem;
   margin: 0 0.8rem 0 0.4rem;
 }
 @media (max-width: 700px) {
   .signInbtn {
-    height: 2rem;
-    width: 4rem;
+    height: 1.5rem;
+    width: 3rem;
   }
 }
 /* =============== Top background image =============== */
 .background-top {
   display: flex;
   width: 100%;
-  height: 36vw;
+  height: 40vw;
   overflow: hidden;
   background-color: var(--color-primary);
   z-index: -3;
@@ -179,6 +208,7 @@ p {
   position: absolute;
   width: 100%;
   opacity: 0.8;
+  height: 40vw;
   mix-blend-mode: multiply;
   filter: saturate(30%);
 }
@@ -186,7 +216,7 @@ p {
 .jap-sun {
   position: absolute;
   width: 100%;
-  height: 36vw;
+  height: 40vw;
   mix-blend-mode: multiply;
   opacity: 0.1;
 }
@@ -194,11 +224,43 @@ p {
 /* =============== intro section =============== */
 .introImage {
   position: absolute;
-  top: 19vw;
+  top: 18vw;
   left: 17.5%;
   width: 65%;
   border-radius: 20px;
   text-align: center;
+}
+@media (max-width: 700px) {
+  .introImage {
+    width: 75;
+  }
+}
+
+.byline {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gray);
+  margin-bottom: 1rem;
+}
+@media (max-width: 650px) {
+  .byline {
+    font-size: 0.6rem;
+  }
+}
+.intro-text p {
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 2rem;
+  margin-bottom: 1rem; */
+}
+@media (max-width: 650px) {
+  .intro-text p {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+  }
 }
 .original-link {
   color: var(--color-primary);
@@ -208,82 +270,146 @@ p {
   color: var(--color-links-hover);
 }
 
-.intro-text p {
-  width: 650px;
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+/* =============== question number =============== */
+.questionNumber,
+.questionMark {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 0.9%;
+  margin-bottom: 0.5rem;
+  z-index: 3;
 }
-
-.byline {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgb(93, 96, 100);
-  margin-bottom: 1rem;
+@media (max-width: 800px) {
+  .questionNumber,
+  .questionMark {
+    font-size: 1rem;
+  }
 }
-/* =============== questions sections =============== */
-
 .numberContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.questionNumber,
-.questionMark {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 700;
-  z-index: 3;
 }
 .topCircle {
-  background-color: red;
-  border: 5px solid white;
-  height: 5rem;
-  width: 5rem;
+  background-color: var(--color-links-hover);
+  border: 4px solid var(--color-light);
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   position: absolute;
   z-index: 2;
 }
+@media (max-width: 800px) {
+  .topCircle {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+/* =============== question image =============== */
 .question-image {
   border-radius: 10px;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  width: 700px;
+  width: 65%;
+  margin-top: -1.8rem;
+  margin-bottom: -1.8rem;
 }
+@media (max-width: 800px) {
+  .question-image {
+    margin-top: -1.2rem;
+    margin-bottom: -1.2rem;
+    width: 80%;
+  }
+}
+/* =============== question questionmark =============== */
 .questionmarkContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .bottomCircle {
-  background-color: rgb(20, 115, 211);
-  border: 5px solid white;
-  height: 5rem;
-  width: 5rem;
+  background-color: var(--color-primary);
+  border: 4px solid var(--color-light);
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   position: absolute;
   z-index: 2;
 }
-.alternatives {
+@media (max-width: 800px) {
+  .bottomCircle {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+/* =============== answer alternatives =============== */
+.question-text {
+  width: 650px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .question-text {
+    width: 90%;
+  }
+}
+.answersContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  width: 1020px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
-
+.answer1,
+.answer3 {
+  justify-self: end;
+}
+@media (max-width: 700px) {
+  .answersContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .altbtn {
-  background-color: rgb(20, 115, 211);
-  color: white;
-  width: 500px;
-  height: 80px;
-  font-weight: 600;
-  font-size: 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  width: 350px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 1.2rem;
   border-radius: 10px;
+}
+/* =============== footer =============== */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: var(--color-gray);
+}
+.footer-text > p {
+  color: var(--color-light);
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 10px;
+}
+@media (max-width: 600px) {
+  .footer-text > p {
+    font-size: 0.7rem;
+  }
+}
+.footer-image {
+  width: 100px;
+}
+@media (max-width: 600px) {
+  .footer-image {
+    margin: 10px;
+  }
 }
