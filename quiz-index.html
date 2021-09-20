@@ -65,26 +65,27 @@
             Rick and Morty is a show that defies all expectations. You might think you know what’s about to come next, but there’s
             always a new character, a plot twist, a planet or universe that you could never have predicted.</p>
           <p>
-            That’s part of its charm, but also part of what makes it so challenging to contain in a series of facts. But if you’re a
+            That’s part of its charm, but also part of what makes it so challenging<span id="dots">...</span><span class="moreText"> to contain in a series of facts. But if you’re a
             true Rick and Morty fan with the brilliance of Rick and the adoration of Morty, you will have a handle on every last
             detail of the show, whether it’s the bizarre catchphrases of Rick or the horrific failures of Jerry (please do not
-            channel Jerry on this quiz though or you will definitely fail).</p>
+            channel Jerry on this quiz though or you will definitely fail).</span></p>
           <p>
-            Grab your nearest Morty, head into an alternate dimension, and find some cool aliens! It’s time to do some Rick and
-            Morty trivia and only the Rickest of Ricks will be able to pass.</p>
-          <p>Show Less</p>
+            <span class="moreText">Grab your nearest Morty, head into an alternate dimension, and find some cool aliens! It’s time to do some Rick and
+            Morty trivia and only the Rickest of Ricks will be able to pass.</span></p>
+          <button onclick="showText()" id="showbtn">Show more</button>
+              <!-- inline event -->
         </article>
       </section>
       <section class="question">
         <div class="question-imageContainer">
           <div class="numberContainer">
               <div class="topCircle"></div>
-            <p class="questionNumber">1</p>
+            <p class="question-number">1</p>
           </div>
           <div class="imageContainer">
             <img
-            class="question-image"
-              src="quizImages/12-Rick-Morty-Wubba-Lubba-Dub-Dub-Trap-Remix-YouTube-810x421.jpg.webp"
+            id="question-image"
+              src="quizImages/question1.webp"
               alt="Rick making a weird face"
             />
           </div>
@@ -94,11 +95,11 @@
             </div>
         </div>
         <h2 class="question-text">Perhaps the most important question to start: What does wubba lubba dub dub mean?</h2>
-        <div class="answersContainer">
-            <input class="altbtn answer1" type="button" value="Please leave">
-            <input class="altbtn answer2" type="button" value="I'm a genious">
-            <input class="altbtn answer3" type="button" value="Let's party">
-            <input class="altbtn answer4" type="button" value="I'm in great pain">
+        <div id="answersContainer">
+            <button class="altbtn" id="answer1" type="button">Please leave</button>
+            <button class="altbtn" id="answer2" type="button">I'm a genious</button>
+            <button class="altbtn" id="answer3" type="button">Let's party</button>
+            <button class="altbtn" id="answer4" type="button">I'm in great pain</button>
         </div>
       </section>
     </main>

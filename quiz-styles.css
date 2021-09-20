@@ -13,7 +13,7 @@
   text-align: center;
   box-sizing: border-box;
   /* ==== visual aid when editing layout ==== */
-  outline: 1px solid var(--color-links-hover);
+  /* outline: 1px solid var(--color-links-hover); */
 }
 
 /* =============== custom properties =============== */
@@ -55,14 +55,17 @@ h2 {
     font-size: 1.3rem;
   }
 }
-p {
+p,
+#showbtn {
   font-size: 1.2rem;
-  line-height: 1.4;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 @media (max-width: 700px) {
-  p {
+  p,
+  #showbtn {
     font-size: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -246,6 +249,7 @@ p {
 @media (max-width: 650px) {
   .byline {
     font-size: 0.6rem;
+    padding: 0 1rem;
   }
 }
 .intro-text p {
@@ -258,7 +262,7 @@ p {
 @media (max-width: 650px) {
   .intro-text p {
     width: 100%;
-    padding: 1rem;
+    padding: 0 1rem;
     text-align: left;
   }
 }
@@ -271,7 +275,7 @@ p {
 }
 
 /* =============== question number =============== */
-.questionNumber,
+.question-number,
 .questionMark {
   color: var(--color-light);
   font-size: 1.5rem;
@@ -281,7 +285,7 @@ p {
   z-index: 3;
 }
 @media (max-width: 800px) {
-  .questionNumber,
+  .question-number,
   .questionMark {
     font-size: 1rem;
   }
@@ -307,7 +311,7 @@ p {
 }
 
 /* =============== question image =============== */
-.question-image {
+#question-image {
   border-radius: 10px;
   width: 65%;
   margin-top: -1.8rem;
@@ -352,7 +356,7 @@ p {
     width: 90%;
   }
 }
-.answersContainer {
+#answersContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -361,12 +365,12 @@ p {
   margin-right: auto;
   margin-bottom: 20px;
 }
-.answer1,
-.answer3 {
+#answer1,
+#answer3 {
   justify-self: end;
 }
 @media (max-width: 700px) {
-  .answersContainer {
+  #answersContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -384,6 +388,10 @@ p {
   font-size: 1.2rem;
   border-radius: 10px;
 }
+.altbtn:hover {
+  background-color: var(--color-secondary);
+}
+
 /* =============== footer =============== */
 footer {
   display: flex;
@@ -412,4 +420,14 @@ footer {
   .footer-image {
     margin: 10px;
   }
+}
+/* =============== linked to js =============== */
+.moreText {
+  display: none;
+}
+#showbtn {
+  font-style: italic;
+  text-decoration: underline;
+  color: var(--color-gray);
+  background-color: var(--color-light);
 }
