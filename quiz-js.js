@@ -1,9 +1,11 @@
 /* =============== show more / show less =============== */
+//using inline-event onclick
 function showText(){
+    //define variables
     var moreText = document.getElementsByClassName("moreText");
     let dots = document.getElementById("dots");
     let showbtn = document.getElementById("showbtn");
-
+    //instructions for the different settings 
     if (showbtn.innerHTML === "Show less") {
         showbtn.innerHTML ="Show more";
         dots.style.display = "inline";
@@ -20,7 +22,7 @@ function showText(){
 }
 
 /* =============== answer question =============== */
-
+//define variables. Var is used to get the global scope.
 var correctAnswers = [4,2,3,1,4];
 var userAnswers = [];
 var score = 0;
@@ -66,8 +68,9 @@ var questions = [
     "answer4": "Portal Gun",
     }
 ]
+//get all answer buttons
 var altbtns = document.querySelectorAll(".altbtn");
-
+//check which one is clicked, add answer to userAnswers and change question
 for (let i = 0; i < altbtns.length; i++) {
 document.querySelector(`#answer${i+1}`).addEventListener("click",function(){
 userAnswers.push(i+1);
@@ -76,8 +79,9 @@ newQuestion();
 }
 
 function newQuestion(){
+//find the current question
 let questionNo = questions.find(q => q.question === document.querySelector(".question-text").innerHTML);
-
+//instructions depending on which is the current question
 switch (questionNo.number) {
     case 1:
         document.querySelector(".question-number").innerHTML = "2";
@@ -116,6 +120,7 @@ switch (questionNo.number) {
         document.querySelector("#answer4").innerHTML = questions[4].answer4;
         break;
         case 5:
+        //finish quiz and show score
         document.querySelector(".numberContainer").style.display = "none";
         document.querySelector(".questionmarkContainer").style.display = "none";
         document.getElementById("question-image").src ="quizImages/well-done-cartoon.webp";
@@ -132,10 +137,10 @@ switch (questionNo.number) {
     default:
         break;
 }
-
 }
 
 function showScore(userAnswers){
+//compares the useAnswers to the correctAnswers
 if (correctAnswers.length != userAnswers.length) {
     alert("Oops. One or more answers are missing")
 }
@@ -145,6 +150,7 @@ else{
             score += 1;
         }
     }
+//creates a new html-element and puts it in the answerConatiner div
 let lastTag = document.createElement("button");
 lastTag.setAttribute("class","altbtn");
 lastTag.setAttribute("id","lastTag");
